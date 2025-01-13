@@ -33,6 +33,8 @@ return { -- Collection of various small independent plugins/modules
 
       require('mini.splitjoin').setup()
 
+      require('mini.pairs').setup()
+
       require('mini.bracketed').setup {
         buffer = { suffix = 'b', options = {} },
         comment = { suffix = 'm', options = {} },
