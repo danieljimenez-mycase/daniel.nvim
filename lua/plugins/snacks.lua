@@ -5,6 +5,7 @@ return {
   ---@type snacks.Config
   opts = {
     lazygit = { enabled = true },
+    indent = { enabled = true },
   },
   keys = {
     {"<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
