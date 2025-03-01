@@ -1,0 +1,8 @@
+{
+  "mjwt": {
+    "prefix": "mjwt",
+    "body": [
+      "<script type=\"text/javascript\">\n    const accessToken = '<%= session[:authorization_context][:access_token] %>';\n    document.addEventListener('DOMContentLoaded', () => {\n      const popup = document.createElement('div');\n      popup.style.cssText = `\n        position: fixed;\n        top: 20px;\n        right: 20px;\n        padding: 15px;\n        background: white;\n        border: 1px solid #ccc;\n        border-radius: 4px;\n        box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n        z-index: 9999;\n      `;\n      \n      const button = document.createElement('button');\n      button.textContent = 'Copy Access Token';\n      button.style.cssText = `\n        padding: 8px 16px;\n        background: #007bff;\n        color: white;\n        border: none;\n        border-radius: 4px;\n        cursor: pointer;\n      `;\n      \n      button.onclick = () => {\n        navigator.clipboard.writeText(accessToken);\n        button.textContent = 'Copied!';\n        setTimeout(() => {\n          button.textContent = 'Copy Access Token';\n        }, 2000);\n      };\n      \n      popup.appendChild(button);\n      document.body.appendChild(popup);\n    });\n</script>"
+    ]
+  }
+}
