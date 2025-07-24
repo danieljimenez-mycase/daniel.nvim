@@ -117,7 +117,7 @@ return {
         code_actions = {
           previewer = vim.fn.executable("delta") == 1 and "codeaction_native" or nil,
         },
-        jump_to_single_result = true,
+        jump1 = true,
       },
     }
   end,

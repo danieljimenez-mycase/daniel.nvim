@@ -18,6 +18,7 @@ return {
           pathresolver = require("kulala.parser.jsonpath").parse,
         },
       },
+      kulala_keymaps = false,
     })
   end
 }
